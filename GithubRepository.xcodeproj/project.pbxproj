@@ -17,6 +17,11 @@
 		ED1138A9283E6CAE0055FC90 /* GithubRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138A8283E6CAE0055FC90 /* GithubRepositoryTests.swift */; };
 		ED1138B3283E6CAF0055FC90 /* GithubRepositoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138B2283E6CAF0055FC90 /* GithubRepositoryUITests.swift */; };
 		ED1138B5283E6CAF0055FC90 /* GithubRepositoryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138B4283E6CAF0055FC90 /* GithubRepositoryUITestsLaunchTests.swift */; };
+		ED1138C6283E6D140055FC90 /* ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138C5283E6D140055FC90 /* ReuseIdentifiers.swift */; };
+		ED1138C9283E6D380055FC90 /* ConstantsUsedInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138C8283E6D380055FC90 /* ConstantsUsedInProject.swift */; };
+		ED1138CB283E6D8D0055FC90 /* GitHubRepositoryJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138CA283E6D8D0055FC90 /* GitHubRepositoryJSON.swift */; };
+		ED1138CF283E6E590055FC90 /* RepositoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138CD283E6E590055FC90 /* RepositoriesTableViewCell.swift */; };
+		ED1138D0283E6E590055FC90 /* RepositoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1138CE283E6E590055FC90 /* RepositoriesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		ED1138AE283E6CAF0055FC90 /* GithubRepositoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubRepositoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1138B2283E6CAF0055FC90 /* GithubRepositoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryUITests.swift; sourceTree = "<group>"; };
 		ED1138B4283E6CAF0055FC90 /* GithubRepositoryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED1138C5283E6D140055FC90 /* ReuseIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiers.swift; sourceTree = "<group>"; };
+		ED1138C8283E6D380055FC90 /* ConstantsUsedInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUsedInProject.swift; sourceTree = "<group>"; };
+		ED1138CA283E6D8D0055FC90 /* GitHubRepositoryJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryJSON.swift; sourceTree = "<group>"; };
+		ED1138CD283E6E590055FC90 /* RepositoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesTableViewCell.swift; sourceTree = "<group>"; };
+		ED1138CE283E6E590055FC90 /* RepositoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +113,13 @@
 			children = (
 				ED11388E283E6CAB0055FC90 /* AppDelegate.swift */,
 				ED113890283E6CAB0055FC90 /* SceneDelegate.swift */,
-				ED113892283E6CAB0055FC90 /* ViewController.swift */,
-				ED113894283E6CAB0055FC90 /* Main.storyboard */,
+				ED1138C1283E6CBC0055FC90 /* Controller */,
+				ED1138C2283E6CC60055FC90 /* View */,
 				ED11389A283E6CAE0055FC90 /* Assets.xcassets */,
 				ED11389C283E6CAE0055FC90 /* LaunchScreen.storyboard */,
 				ED11389F283E6CAE0055FC90 /* Info.plist */,
 				ED113897283E6CAB0055FC90 /* GithubRepository.xcdatamodeld */,
+				ED1138C7283E6D250055FC90 /* Model */,
 			);
 			path = GithubRepository;
 			sourceTree = "<group>";
@@ -128,6 +139,42 @@
 				ED1138B4283E6CAF0055FC90 /* GithubRepositoryUITestsLaunchTests.swift */,
 			);
 			path = GithubRepositoryUITests;
+			sourceTree = "<group>";
+		};
+		ED1138C1283E6CBC0055FC90 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED113892283E6CAB0055FC90 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED1138C2283E6CC60055FC90 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED1138CC283E6E3C0055FC90 /* TableVIewCells */,
+				ED113894283E6CAB0055FC90 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED1138C7283E6D250055FC90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED1138C5283E6D140055FC90 /* ReuseIdentifiers.swift */,
+				ED1138C8283E6D380055FC90 /* ConstantsUsedInProject.swift */,
+				ED1138CA283E6D8D0055FC90 /* GitHubRepositoryJSON.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED1138CC283E6E3C0055FC90 /* TableVIewCells */ = {
+			isa = PBXGroup;
+			children = (
+				ED1138CD283E6E590055FC90 /* RepositoriesTableViewCell.swift */,
+				ED1138CE283E6E590055FC90 /* RepositoriesTableViewCell.xib */,
+			);
+			path = TableVIewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED11389E283E6CAE0055FC90 /* LaunchScreen.storyboard in Resources */,
+				ED1138D0283E6E590055FC90 /* RepositoriesTableViewCell.xib in Resources */,
 				ED11389B283E6CAE0055FC90 /* Assets.xcassets in Resources */,
 				ED113896283E6CAB0055FC90 /* Main.storyboard in Resources */,
 			);
@@ -262,7 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED113899283E6CAB0055FC90 /* GithubRepository.xcdatamodeld in Sources */,
+				ED1138C6283E6D140055FC90 /* ReuseIdentifiers.swift in Sources */,
 				ED113893283E6CAB0055FC90 /* ViewController.swift in Sources */,
+				ED1138C9283E6D380055FC90 /* ConstantsUsedInProject.swift in Sources */,
+				ED1138CB283E6D8D0055FC90 /* GitHubRepositoryJSON.swift in Sources */,
+				ED1138CF283E6E590055FC90 /* RepositoriesTableViewCell.swift in Sources */,
 				ED11388F283E6CAB0055FC90 /* AppDelegate.swift in Sources */,
 				ED113891283E6CAB0055FC90 /* SceneDelegate.swift in Sources */,
 			);
