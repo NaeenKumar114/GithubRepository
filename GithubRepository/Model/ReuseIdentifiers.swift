@@ -9,10 +9,13 @@ import Foundation
 struct reuseCellIdentifier
 {
     
-   static var repositoriesTableViewCell = "RepositoriesTableViewCell"
+    static var repositoriesTableViewCell = "RepositoriesTableViewCell"
+    static var detailsTableViewCell = "DetailsTableViewCell"
 }
 struct reuseNibIdentifier
 
 {
     static var repositoriesTableViewCell = "RepositoriesTableViewCell"
+    static var detailsTableViewCell = "DetailsTableViewCell"
+
 }

@@ -70,7 +70,17 @@ class ViewController: UIViewController {
             task.resume()
         }
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifiers.mainViewToDetailView
+        {
+            let destinationVC = segue.destination as! DetailsViewController
+            let row = sender as! Int
+            if let repository = repositoriesData?[row]
+            {
+                destinationVC.repositoryData = repository
+            }
+        }
+    }
 
 }
 
@@ -108,6 +118,8 @@ extension ViewController: UITableViewDelegate , UITableViewDataSource
         return repositoriesData?.count ?? 0
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueIdentifiers.mainViewToDetailView, sender: indexPath.row)
+
         repositoryTableView.deselectRow(at: indexPath, animated: true)
     }
 

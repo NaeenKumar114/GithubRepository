@@ -23,6 +23,9 @@
 		ED1138CF283E6E590055FC90 /* RepositoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138CD283E6E590055FC90 /* RepositoriesTableViewCell.swift */; };
 		ED1138D0283E6E590055FC90 /* RepositoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1138CE283E6E590055FC90 /* RepositoriesTableViewCell.xib */; };
 		ED1138D2283E708B0055FC90 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138D1283E708B0055FC90 /* SpinnerViewController.swift */; };
+		ED1138D4283E74870055FC90 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138D3283E74870055FC90 /* DetailsViewController.swift */; };
+		ED1138D7283E78640055FC90 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1138D5283E78640055FC90 /* DetailsTableViewCell.swift */; };
+		ED1138D8283E78640055FC90 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1138D6283E78640055FC90 /* DetailsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		ED1138CD283E6E590055FC90 /* RepositoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesTableViewCell.swift; sourceTree = "<group>"; };
 		ED1138CE283E6E590055FC90 /* RepositoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesTableViewCell.xib; sourceTree = "<group>"; };
 		ED1138D1283E708B0055FC90 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		ED1138D3283E74870055FC90 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		ED1138D5283E78640055FC90 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
+		ED1138D6283E78640055FC90 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				ED113892283E6CAB0055FC90 /* ViewController.swift */,
+				ED1138D3283E74870055FC90 /* DetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +183,8 @@
 			children = (
 				ED1138CD283E6E590055FC90 /* RepositoriesTableViewCell.swift */,
 				ED1138CE283E6E590055FC90 /* RepositoriesTableViewCell.xib */,
+				ED1138D5283E78640055FC90 /* DetailsTableViewCell.swift */,
+				ED1138D6283E78640055FC90 /* DetailsTableViewCell.xib */,
 			);
 			path = TableVIewCells;
 			sourceTree = "<group>";
@@ -284,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1138D8283E78640055FC90 /* DetailsTableViewCell.xib in Resources */,
 				ED11389E283E6CAE0055FC90 /* LaunchScreen.storyboard in Resources */,
 				ED1138D0283E6E590055FC90 /* RepositoriesTableViewCell.xib in Resources */,
 				ED11389B283E6CAE0055FC90 /* Assets.xcassets in Resources */,
@@ -317,10 +327,12 @@
 				ED113893283E6CAB0055FC90 /* ViewController.swift in Sources */,
 				ED1138C9283E6D380055FC90 /* ConstantsUsedInProject.swift in Sources */,
 				ED1138CB283E6D8D0055FC90 /* GitHubRepositoryJSON.swift in Sources */,
+				ED1138D7283E78640055FC90 /* DetailsTableViewCell.swift in Sources */,
 				ED1138CF283E6E590055FC90 /* RepositoriesTableViewCell.swift in Sources */,
 				ED11388F283E6CAB0055FC90 /* AppDelegate.swift in Sources */,
 				ED1138D2283E708B0055FC90 /* SpinnerViewController.swift in Sources */,
 				ED113891283E6CAB0055FC90 /* SceneDelegate.swift in Sources */,
+				ED1138D4283E74870055FC90 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

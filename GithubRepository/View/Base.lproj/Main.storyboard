@@ -45,11 +45,55 @@
                     <navigationItem key="navigationItem" title="Repositories" id="E3B-FN-5Sy"/>
                     <connections>
                         <outlet property="repositoryTableView" destination="aph-YT-EPa" id="4Yn-CW-Sqt"/>
+                        <segue destination="t2L-0X-gjS" kind="show" identifier="mainToDetailView" id="pP8-En-d8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="55.580357142857139"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="hnI-Uj-Y9Z">
+            <objects>
+                <viewController id="t2L-0X-gjS" customClass="DetailsViewController" customModule="GithubRepository" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JH0-in-phq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhH-pS-9KC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oZ0-xi-7Su">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oZ0-xi-7Su" secondAttribute="trailing" id="3iA-UF-IL6"/>
+                                    <constraint firstItem="oZ0-xi-7Su" firstAttribute="leading" secondItem="MhH-pS-9KC" secondAttribute="leading" id="IpZ-dm-Goo"/>
+                                    <constraint firstItem="oZ0-xi-7Su" firstAttribute="top" secondItem="MhH-pS-9KC" secondAttribute="top" id="bOh-FM-p70"/>
+                                    <constraint firstAttribute="bottom" secondItem="oZ0-xi-7Su" secondAttribute="bottom" id="rNi-fl-e7j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jIN-2a-EnP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jIN-2a-EnP" firstAttribute="trailing" secondItem="MhH-pS-9KC" secondAttribute="trailing" id="34D-p5-FoK"/>
+                            <constraint firstItem="MhH-pS-9KC" firstAttribute="top" secondItem="jIN-2a-EnP" secondAttribute="top" id="PH1-jO-dwW"/>
+                            <constraint firstItem="MhH-pS-9KC" firstAttribute="leading" secondItem="jIN-2a-EnP" secondAttribute="leading" id="S66-Cp-tvv"/>
+                            <constraint firstItem="jIN-2a-EnP" firstAttribute="bottom" secondItem="MhH-pS-9KC" secondAttribute="bottom" id="s4B-wg-5Hr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Jt-KJ-fka"/>
+                    <connections>
+                        <outlet property="detailsTableView" destination="oZ0-xi-7Su" id="N8o-Ry-EMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9n-8W-qW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946" y="54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="chk-6O-wow">

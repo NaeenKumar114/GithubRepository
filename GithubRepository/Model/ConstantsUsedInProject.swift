@@ -11,3 +11,7 @@ struct ConstantsUsedInProject {
     static let baseUrl = "https://api.github.com/repositories"
 }
 
+
+struct segueIdentifiers {
+    static let mainViewToDetailView = "mainToDetailView"
+}
