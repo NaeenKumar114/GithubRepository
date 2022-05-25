@@ -43,6 +43,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Repositories" id="E3B-FN-5Sy"/>
+                    <connections>
+                        <outlet property="repositoryTableView" destination="aph-YT-EPa" id="4Yn-CW-Sqt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

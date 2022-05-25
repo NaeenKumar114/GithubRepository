@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct GitHubRepositoryJSON: Codable {
+// MARK: - GitHubRepoaitoryJSONElement
+struct GitHubRepoaitoryJSONElement: Codable {
     let id: Int?
     let nodeID, name, fullName: String?
     let gitHubRepoaitoryJSONPrivate: Bool?
@@ -125,3 +126,4 @@ enum TypeEnum: String, Codable {
     case user = "User"
 }
 
+typealias GitHubRepoaitoryJSON = [GitHubRepoaitoryJSONElement]

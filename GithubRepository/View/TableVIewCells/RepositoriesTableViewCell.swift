@@ -8,7 +8,10 @@
 import UIKit
 
 class RepositoriesTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var repositoryNameLabel: UILabel!
+    @IBOutlet weak var repositoryOwnerName: UILabel!
+    @IBOutlet weak var avatarImageVIew: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
