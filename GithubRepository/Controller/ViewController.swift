@@ -9,12 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableViewPage: UIPageControl!
     @IBOutlet weak var repositoryTableView: UITableView!
     var repositoriesData : GitHubRepoaitoryJSON?
     let loaderSpinView = SpinnerViewController()
     var refreshControl = UIRefreshControl()
+    var noOfPages : Int?
+    var currentPage = 1
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         super.viewDidLoad()
         repositoryTableView.delegate = self
         repositoryTableView.dataSource = self
@@ -24,8 +28,37 @@ class ViewController: UIViewController {
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(self.refreshRepositoryData), for: .valueChanged)
         repositoryTableView.addSubview(refreshControl)
+        tableViewPage.numberOfPages = 8
+    }
+   
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        if noOfPages != nil
+        {
+         
+        if currentPage < noOfPages! - 1
+        {
+        currentPage = currentPage + 1
+        tableViewPage.currentPage = currentPage - 1
+            repositoryTableView.reloadData()
+
+        }
+        }
     }
     
+    @IBAction func previousButtonPressed(_ sender: Any) {
+        if noOfPages != nil
+        {
+       
+        if currentPage > 1
+        {
+            print("j")
+        currentPage = currentPage - 1
+        tableViewPage.currentPage = currentPage - 1
+            repositoryTableView.reloadData()
+        }
+        }
+
+    }
     @objc func refreshRepositoryData() {
         refreshControl.endRefreshing()
         makePostCallGithubRepository()
@@ -61,14 +94,32 @@ class ViewController: UIViewController {
                     DispatchQueue.main.async { [self] in
                             repositoriesData = jsonResponse
                             print(jsonResponse as Any)
-                            repositoryTableView.reloadData()
                             removeSpinnerView()
+                            calculatePage()
                        
                     }
                 }
             }
             task.resume()
         }
+    }
+    func calculatePage()
+    {
+        let noOfItems = repositoriesData!.count
+        print(noOfItems)
+        let pages = noOfItems / 10
+        if noOfItems % 10 == 0
+        {
+            noOfPages = pages
+        }
+        else
+        {
+            noOfPages = pages + 1
+        }
+        
+        repositoryTableView.reloadData()
+
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueIdentifiers.mainViewToDetailView
@@ -90,7 +141,8 @@ extension ViewController: UITableViewDelegate , UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = repositoryTableView.dequeueReusableCell(withIdentifier: reuseCellIdentifier.repositoriesTableViewCell) as! RepositoriesTableViewCell
-        if let repositoryData = repositoriesData?[indexPath.row]
+        let itemNumber = currentPage * 10 + indexPath.row
+        if let repositoryData = repositoriesData?[itemNumber]
         {
             cell.repositoryNameLabel.text = repositoryData.name ?? ""
             cell.repositoryOwnerName.text = repositoryData.owner?.login ?? ""
@@ -115,12 +167,13 @@ extension ViewController: UITableViewDelegate , UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositoriesData?.count ?? 0
+        return 10
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: segueIdentifiers.mainViewToDetailView, sender: indexPath.row)
 
         repositoryTableView.deselectRow(at: indexPath, animated: true)
     }
+  
 
 }
